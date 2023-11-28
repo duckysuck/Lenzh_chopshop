@@ -1,13 +1,6 @@
-ESX = nil
 local PlayerData, Timer, HasAlreadyEnteredMarker, ChoppingInProgress, LastZone, isDead, pedIsTryingToChopVehicle, menuOpen  = {}, 0, false, false, nil, false, false, false
 local CurrentAction, CurrentActionMsg, CurrentActionData, menuOpen, isPlayerWhitelisted  = nil, '', {}, false, false
 local timing = math.ceil(Config.Timer * 60000)
-
-Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj) ESX = obj end)
-        Citizen.Wait(0)
-    end
 
     while ESX.GetPlayerData().job == nil do
         Citizen.Wait(10)
