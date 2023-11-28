@@ -1,5 +1,3 @@
-USE `essentialmode`;
-
 INSERT INTO `items` (`name`, `label`, `weight`) VALUES
   ('battery', 'Battery', 2),
   ('muffler', 'Muffler', 2),
